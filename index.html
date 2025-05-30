@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Digital Influence: A Career in Social Media Management</title>
+    <style>
+        /* Import a clean, modern sans-serif font suitable for blogs */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Merriweather:wght@400;700&display=swap');
+
+        /* Define CSS variables for consistent blog-style colors */
+        :root {
+            --primary-text: #333; /* Dark gray for main text */
+            --secondary-text: #666; /* Slightly lighter gray for secondary text */
+            --light-bg: #f5f5f5; /* Off-white background for the page */
+            --white-bg: #ffffff; /* Pure white for content cards/sections */
+            --accent-color: #28a745; /* A pleasant green for accents/links */
+            --border-color: #ddd; /* Light gray for subtle borders */
+            --shadow-color: rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
+        }
+
+        /* Base body styles for a blog feel */
+        body {
+            font-family: 'Inter', sans-serif; /* Clean sans-serif font for overall text */
+            background-color: var(--light-bg); /* Light background */
+            color: var(--primary-text); /* Dark text for contrast */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            line-height: 1.7; /* Increased line height for readability */
+            font-weight: 300; /* Lighter font weight for body text */
+        }
+
+        /* Header styling */
+        header {
+            background-color: var(--white-bg); /* White background for header */
+            padding: 20px 40px;
+            border-bottom: 1px solid var(--border-color); /* Subtle border */
+            box-shadow: 0 2px 5px var(--shadow-color); /* Soft shadow */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo styling for a blog */
+        .logo {
+            font-family: 'Merriweather', serif; /* A more traditional, readable serif font for the logo */
+            font-size: 2.2em;
+            font-weight: 700; /* Bold for emphasis */
+            color: var(--primary-text);
+            text-decoration: none; /* Ensure it looks like a logo, not a link */
+        }
+
+        /* Navigation styling */
+        nav ul {
+            list-style: none; /* Remove bullet points */
+            margin: 0;
+            padding: 0;
+            display: flex; /* Arrange navigation items in a row */
+        }
+
+        nav ul li {
+            margin-left: 30px; /* Spacing between navigation items */
+        }
+
+        nav ul li a {
+            color: var(--secondary-text); /* Default link color */
+            text-decoration: none; /* Remove underline */
+            font-size: 1.05em;
+            padding: 5px 0;
+            transition: color 0.3s, border-bottom 0.3s; /* Smooth transition on hover */
+            font-weight: 400; /* Standard font weight for nav links */
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color); /* Accent color on hover */
+            border-bottom: 2px solid var(--accent-color); /* Subtle underline effect */
+        }
+
+        /* Main content container styling */
+        .container {
+            flex-grow: 1; /* Allow container to grow and fill available space */
+            padding: 40px;
+            max-width: 800px; /* Optimal width for blog content readability */
+            margin: 30px auto; /* Center the container with margin */
+            background-color: var(--white-bg); /* White background for content */
+            border: 1px solid var(--border-color); /* Subtle border */
+            box-shadow: 0 4px 12px var(--shadow-color); /* Soft shadow for a card-like effect */
+            border-radius: 8px; /* Slightly rounded corners */
+        }
+
+        /* Heading styles */
+        h1, h2 {
+            font-family: 'Merriweather', serif; /* Serif font for headings */
+            font-weight: 700; /* Bold headings */
+            color: var(--primary-text);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.8em; /* Larger font size for main title */
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            line-height: 1.3;
+        }
+
+        /* Paragraph styling */
+        p {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            text-align: justify;
+            color: var(--primary-text);
+        }
+
+        /* Button styling */
+        .button {
+            display: inline-block;
+            background-color: var(--accent-color); /* Accent color background */
+            color: var(--white-bg); /* White text on button */
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px; /* Slightly rounded corners */
+            transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+        }
+
+        .button:hover {
+            background-color: #218838; /* Darker green on hover */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Slightly more prominent shadow on hover */
+        }
+
+        /* Homepage Specifics */
+        .hero-section {
+            text-align: center;
+            padding: 50px 20px;
+            margin-bottom: 30px;
+            background-color: var(--light-bg); /* Light background for hero */
+            border-radius: 8px;
+            border: 1px solid var(--border-color); /* Subtle border */
+            box-shadow: 0 2px 8px var(--shadow-color); /* Soft shadow */
+        }
+
+        .hero-section p {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto 25px auto; /* Center paragraph and add bottom margin */
+            color: var(--secondary-text);
+        }
+
+        /* Second Page Specifics (Ordered List) */
+        ol {
+            list-style-type: decimal; /* Numbered list */
+            padding-left: 25px;
+            color: var(--primary-text);
+        }
+
+        ol li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        ol li strong {
+            color: var(--accent-color); /* Highlight important text in accent color */
+        }
+
+        /* Third Page Specifics (Table) */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Collapse table borders */
+            margin-top: 30px;
+            background-color: var(--white-bg); /* White background for table */
+            border: 1px solid var(--border-color); /* Subtle border */
+            border-radius: 8px; /* Rounded corners for the table */
+            overflow: hidden; /* Ensures rounded corners apply to content */
+            box-shadow: 0 2px 8px var(--shadow-color); /* Soft shadow */
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color); /* Subtle border between rows */
+        }
+
+        th {
+            background-color: var(--light-bg); /* Light background for table headers */
+            color: var(--primary-text);
+            font-weight: 700;
+        }
+
+        td {
+            color: var(--secondary-text);
+        }
+
+        table a {
+            color: var(--accent-color); /* Accent color for links in table */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        table a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: var(--primary-text); /* Dark background for footer */
+            color: var(--light-bg); /* Light text on footer */
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid var(--border-color); /* Subtle border */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column; /* Stack logo and nav vertically */
+                padding: 15px 20px;
+            }
+
+            .logo {
+                font-size: 1.8em;
+                margin-bottom: 15px;
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack nav items vertically */
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 8px 0; /* Adjust spacing for stacked items */
+            }
+
+            .container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .hero-section p {
+                font-size: 1em;
+            }
+
+            th, td {
+                padding: 10px; /* Reduce padding for smaller screens */
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">DIGITAL INFLUENCE BLOG</div>
+        <nav>
+            <ul>
+                <li><a href="#" data-page="index.html">Home</a></li>
+                <li><a href="#" data-page="guide.html">Guide</a></li>
+                <li><a href="#" data-page="inspiration.html">Inspiration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content-area" class="container">
+        </div>
+
+    <footer>
+        &copy; 2025 Digital Influence Careers. All Rights Reserved.
+    </footer>
+
+    <script>
+        // JavaScript for simple client-side routing and content loading
+        document.addEventListener('DOMContentLoaded', function() {
+            const contentArea = document.getElementById('content-area');
+
+            // Function to load content based on the page name
+            function loadContent(pageName) {
+                let contentHTML = '';
+
+                // Determine which content to load based on the pageName
+                if (pageName === 'index.html' || pageName === '/') {
+                    // Homepage content
+                    contentHTML = `
+                        <div class="hero-section">
+                            <h1>Building Digital Influence: A Career in Social Media Management</h1>
+                            <p>Selamat datang ke Digital Influence Blog! Di sini, kami meneroka landskap kerjaya yang dinamik dalam bidang <strong>Pengurusan Media Sosial</strong>. Dalam era digital yang pesat ini, pengurus media sosial adalah arkitek kehadiran jenama dalam talian, membentuk naratif, membina komuniti, dan memacu penglibatan. Kerjaya ini menggabungkan strategi komunikasi, kreativiti kandungan, dan analisis data untuk mencapai impak digital yang maksimum.</p>
+                            <a href="#" data-page="guide.html" class="button">Start Your Journey</a>
+                        </div>
+                    `;
+                } else if (pageName === 'guide.html') {
+                    // Second Page: Step by Step Guide
+                    contentHTML = `
+                        <h2>Step by Step Guide: Become a Social Media Architect</h2>
+                        <p>Mengejar kerjaya sebagai pengurus media sosial memerlukan gabungan kemahiran strategik, kreatif, dan analitikal. Ikuti langkah-langkah ini untuk membina laluan anda menuju kejayaan dalam bidang pengurusan media sosial:</p>
+                        <ol>
+                            <li><strong>Memahami Platform Media Sosial:</strong> Kuasai selok-belok platform utama seperti Facebook, Instagram, Twitter/X, LinkedIn, TikTok, dan YouTube. Fahami algoritma, demografi pengguna, dan ciri unik setiap platform.</li>
+                            <li><strong>Membangunkan Kemahiran Penciptaan Kandungan:</strong> Pelajari cara menghasilkan kandungan yang menarik dan relevan, termasuk penulisan kreatif, reka bentuk visual (grafik, video), dan kemahiran penyuntingan asas.</li>
+                            <li><strong>Menguasai Strategi Pemasaran Digital:</strong> Fahami prinsip asas pemasaran digital, SEO, pemasaran kandungan, dan pengiklanan berbayar di media sosial untuk membangunkan kempen yang berkesan.</li>
+                            <li><strong>Menganalisis Data dan Metrik:</strong> Belajar menggunakan alatan analitik media sosial untuk menjejak prestasi, memahami tingkah laku audiens, dan mengoptimumkan strategi berdasarkan data.</li>
+                            <li><strong>Membina Kemahiran Komunikasi dan Komuniti:</strong> Kembangkan keupayaan untuk berinteraksi dengan audiens, menguruskan maklum balas, dan membina komuniti dalam talian yang positif dan terlibat.</li>
+                            <li><strong>Mendapatkan Pensijilan Industri:</strong> Pertimbangkan untuk mendapatkan pensijilan dari platform media sosial (contoh: Facebook Blueprint, Google Ads) atau organisasi pemasaran digital untuk mengesahkan kemahiran anda.</li>
+                            <li><strong>Membina Portfolio dan Pengalaman Praktikal:</strong> Mulakan dengan menguruskan akaun media sosial peribadi, projek sukarela, atau perniagaan kecil. Kumpulkan contoh kerja anda dalam portfolio yang menunjukkan keupayaan anda.</li>
+                            <li><strong>Jaringan (Networking) dalam Industri:</strong> Berhubung dengan profesional media sosial lain, menghadiri webinar, dan menyertai komuniti dalam talian untuk belajar, berkongsi pengalaman, dan mencari peluang.</li>
+                        </ol>
+                    `;
+                } else if (pageName === 'inspiration.html') {
+                    // Third Page: Inspiration & Resources
+                    contentHTML = `
+                        <h2>Inspiration & Resources: Digital Influence Pioneers</h2>
+                        <p>Dapatkan inspirasi dari beberapa tokoh berpengaruh dalam dunia media sosial dan pemasaran digital. Mereka telah membentuk cara jenama berinteraksi dalam talian dan terus memberi impak yang besar.</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Bidang Pengaruh</th>
+                                    <th>Sumber/Laman Web Rasmi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Gary Vaynerchuk</td>
+                                    <td>Pemasaran Digital, Keusahawanan</td>
+                                    <td><a href="https://www.garyvaynerchuk.com/" target="_blank">garyvaynerchuk.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Ann Handley</td>
+                                    <td>Pemasaran Kandungan, Penulisan</td>
+                                    <td><a href="https://annhandley.com/" target="_blank">annhandley.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Neil Patel</td>
+                                    <td>SEO, Pemasaran Digital</td>
+                                    <td><a href="https://neilpatel.com/" target="_blank">neilpatel.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Mari Smith</td>
+                                    <td>Pemasaran Facebook, Video</td>
+                                    <td><a href="https://www.marismith.com/" target="_blank">marismith.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Jay Baer</td>
+                                    <td>Pemasaran, Perkhidmatan Pelanggan</td>
+                                    <td><a href="https://www.jaybaer.com/" target="_blank">jaybaer.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Seth Godin</td>
+                                    <td>Pemasaran, Keusahawanan</td>
+                                    <td><a href="https://sethgodin.typepad.com/" target="_blank">sethgodin.typepad.com</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    `;
+                }
+
+                // Inject the generated HTML into the content area
+                if (contentArea) {
+                    contentArea.innerHTML = contentHTML;
+                }
+            }
+
+            // Load content for the homepage on initial load
+            loadContent('index.html');
+
+            // Add event listeners to navigation links and the "Start Your Journey" button
+            document.querySelectorAll('nav ul li a, .button').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    const targetPage = this.getAttribute('data-page'); // Get the target page from data-page attribute
+                    if (targetPage) {
+                        loadContent(targetPage); // Load content for the clicked link
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
